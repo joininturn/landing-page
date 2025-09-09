@@ -77,7 +77,7 @@ export default function Navigation() {
             </a>
             <BiMenu onClick={handleOnHamburgerClick} className="text-black text-5xl block md:hidden my-auto order-1 mr-[3vw]" />
             { /* other page links */ }
-            <div className="nav-page-links hidden absolute md:left-1/2 top-20 md:top-0 md:-translate-x-1/2 w-[90vw] md:w-[clamp(150px,_55vw,_600px)] md:flex flex-col md:flex-row md:items-center justify-center gap-y-10 md:gap-[7vw] mx-auto mr-5 mt-1 order-1 md:order-2 bg-blue-700 md:bg-transparent h-90 md:h-full p-5 md:p-0 rounded-lg">
+            <div className="nav-page-links hidden absolute md:left-1/2 top-20 md:top-0 md:-translate-x-1/2 w-[90vw] md:w-[clamp(150px,_55vw,_800px)] md:flex flex-col md:flex-row md:items-center justify-center gap-y-10 md:gap-[7vw] mx-auto mr-5 mt-1 order-1 md:order-2 bg-blue-700 md:bg-transparent h-90 md:h-full p-5 md:p-0 rounded-lg">
                 {
                     listOfLinks.map(( link ) => (
                         <a key={link.name} href={link.href} className="transition-none text-3xl font-semibold md:text-lg md:font-normal text-white md:text-black md:hover:text-blue-700 md:transition-all md:duration-200 md:hover:font-bold">{link.name}</a>
