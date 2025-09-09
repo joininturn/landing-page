@@ -13,7 +13,7 @@ export default function Navigation() {
         { name: "Contact", href: "/contact" },
         { name: "Our Mission", href: "/mission"},
         { name: "Team", href: "/team"}
-        // we can always add more... (roro is a bum btw)
+        // we can always add more...
     ]
 
     useGSAP(() => {
@@ -69,24 +69,24 @@ export default function Navigation() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 flex flex-row justify-between items-center w-full h-20 px-5 z-50">
+        <nav className="fixed top-0 left-0 p-5 flex flex-row w-screen h-20 z-50">
             { /* logo/link to homepage */ }
-            <a aria-label="Hyperlink to InTurn's Homepage" href="/" className="flex flex-row items-center">
+            <a aria-label="Hyperlink to InTurn's Homepage" href="/" className="flex flex-row items-center justify-center mr-0 md:mr-5 order-2 md:order-1">
                 <InturnLogo color="oklch(48.8% 0.243 264.376)" className="h-10 w-10" />
                 <span className="text-3xl ml-1 font-bold bg-gradient-to-r from-blue-700 to-blue-700/90 bg-clip-text text-transparent">InTurn</span>
             </a>
-
-            { /* other page links and start now button */ }
-            <div className="flex flex-row items-center gap-5">
-                <div className="nav-page-links hidden md:flex flex-row items-center gap-5">
-                    {
-                        listOfLinks.map((link) => (
-                            <a key={link.name} href={link.href} className="transition-transform transform text-lg font-normal text-black hover:text-blue-700 duration-300 hover:scale-110">{link.name}</a>
-                        ))
-                    }
-                </div>
-                <a href="/start" className="text-lg font-semibold bg-gradient-to-r from-blue-700 to-blue-700/90 px-4 py-2 rounded-lg text-white">Start Now</a>
-                <BiMenu onClick={handleOnHamburgerClick} className="text-black text-3xl block md:hidden" />
+            <BiMenu onClick={handleOnHamburgerClick} className="text-black text-5xl block md:hidden order-1 mr-[3vw]" />
+            { /* other page links */ }
+            <div className="nav-page-links hidden absolute top-20 md:top-0 md:right-40 w-[90%] md:w-fit md:flex flex-col md:flex-row md:items-center justify-center gap-y-10 gap-x-8 mx-auto mr-5 order-1 md:order-2 bg-blue-700 md:bg-transparent h-90 md:h-full p-5 md:p-0 rounded-lg">
+                {
+                    listOfLinks.map(( link ) => (
+                        <a key={link.name} href={link.href} className="transition-none text-3xl font-semibold md:text-[16px] md:font-normal text-white md:text-black md:hover:text-blue-700 md:transition-all md:duration-200 md:hover:font-bold">{link.name}</a>
+                    ))
+                }
+            </div>
+            { /* start now */ }
+            <div className="flex flex-row items-center ml-auto mr-3 order-3">
+                <a href="/start" className="text-xl font-semibold bg-gradient-to-r from-blue-700 to-blue-700/90 p-2 rounded-lg text-white">Start Now</a>
             </div>
         </nav>
     )
