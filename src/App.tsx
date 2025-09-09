@@ -1,7 +1,9 @@
+import Navigation from "./components/Navigation";
+
 export default function App() {
   return (
     <>
-      Pretend there's a cool landing page here :)
+      <Navigation />
     </>
   )
 }
