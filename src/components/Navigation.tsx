@@ -1,3 +1,5 @@
+'use client';
+
 import InturnLogo from "../assets/InturnLogo";
 import { BiMenu } from "react-icons/bi";
 import gsap from "gsap";
