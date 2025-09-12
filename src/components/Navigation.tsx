@@ -5,6 +5,7 @@ import { BiMenu } from "react-icons/bi";
 import gsap from "gsap";
 import { useState } from "react";
 import { useGSAP } from "@gsap/react";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Navigation() {
     const [navOpen, setNavOpen] = useState<boolean | null>(null);
@@ -71,7 +72,7 @@ export default function Navigation() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 p-5 flex flex-row w-screen h-20 z-50">
+        <nav className="sticky top-0 left-0 mx-auto p-5 flex flex-row w-screen max-w-[1500px] h-20 z-50">
             { /* logo/link to homepage */ }
             <a aria-label="Hyperlink to InTurn's Homepage" href="/" className="flex flex-row items-center justify-center ml-0 md:ml-10 order-2 md:order-1">
                 <InturnLogo color="oklch(48.8% 0.243 264.376)" className="h-8 w-8" />
@@ -79,16 +80,18 @@ export default function Navigation() {
             </a>
             <BiMenu onClick={handleOnHamburgerClick} className="text-black text-5xl block md:hidden order-1 mr-[3vw]" />
             { /* other page links */ }
-            <div className="nav-page-links hidden absolute top-20 md:top-0 md:right-40 w-[90%] md:w-fit md:flex flex-col md:flex-row md:items-center justify-center gap-y-10 gap-x-8 mx-auto mr-5 order-1 md:order-2 bg-blue-700 md:bg-transparent h-90 md:h-full p-5 md:p-0 rounded-lg">
+            <div className="nav-page-links hidden absolute top-20 md:top-0 md:right-40 w-[90%] md:w-fit md:flex flex-col md:flex-row md:items-center justify-center gap-y-10 gap-x-8 mx-auto mr-5 order-1 md:order-2 bg-blue-600 md:bg-transparent h-90 md:h-full p-5 md:p-0 rounded-lg">
                 {
                     listOfLinks.map(( link ) => (
-                        <a key={link.name} href={link.href} className="transition-none text-3xl font-semibold md:text-[14px] md:font-normal text-white md:text-black md:hover:text-blue-700 md:transition-all md:duration-200 md:hover:-translate-y-0.5 ">{link.name}</a>
+                        <a key={link.name} href={link.href} className="transition-none text-3xl font-semibold md:text-[14px] md:font-normal text-white md:text-black md:hover:text-blue-600 md:transition-all md:duration-200 md:hover:scale-105 ">{link.name}</a>
                     ))
                 }
             </div>
             { /* start now */ }
-            <div className="flex flex-row items-center ml-auto mr-10 order-3">
-                <a href="/start" className="text-md font-semibold bg-gradient-to-r from-blue-700 to-blue-700/90 p-2 rounded-lg text-white">Start Now</a>
+            <div className="relative flex flex-row items-center ml-auto mr-10 order-3">
+                <a href="/start" className="text-md font-semibold bg-gradient-to-r from-blue-600 to-blue-600/90 p-2 rounded-lg text-white">Start Now</a>
+                <div className="w-4 h-4 -top-1.5 -right-1.5 rounded-full absolute bg-blue-500 animate-ping" />
+                <div className="w-4 h-4 -top-1.5 -right-1.5 rounded-full absolute bg-blue-500" />
             </div>
         </nav>
     )
