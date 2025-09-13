@@ -1,10 +1,10 @@
 import Hook from "@/components/Hook";
 import Navigation from "@/components/Navigation";
 import Features from "@/components/Features";
-import GlobeSection from "@/components/GlobeSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import AboutSection from "@/components/AboutSection";
 
 export const metadata: Metadata = {
   title: "Inturn Landing",
@@ -17,7 +17,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       <Hook />
-      <GlobeSection />
+      <AboutSection />
       <Features />
       <CTA />
       <Footer />
