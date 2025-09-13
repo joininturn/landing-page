@@ -1,11 +1,10 @@
 'use client';
 
 import InturnLogo from "../assets/InturnLogo";
-import { BiMenu } from "react-icons/bi";
 import gsap from "gsap";
 import { useState } from "react";
 import { useGSAP } from "@gsap/react";
-import { FaArrowRight } from "react-icons/fa6";
+import { Menu } from "lucide-react";
 
 export default function Navigation() {
     const [navOpen, setNavOpen] = useState<boolean | null>(null);
@@ -79,7 +78,7 @@ export default function Navigation() {
                 <InturnLogo color="oklch(48.8% 0.243 264.376)" className="h-6 w-6" />
                 <span className="text-xl ml-1 font-bold bg-gradient-to-r from-blue-700 to-blue-700/90 bg-clip-text text-transparent">InTurn</span>
             </a>
-            <BiMenu onClick={handleOnHamburgerClick} className="text-black text-3xl block md:hidden order-1 mr-4" />
+            <Menu onClick={handleOnHamburgerClick} className="text-black w-6 h-6 block md:hidden order-1 mr-4 my-auto" />
             { /* other page links */ }
             <div className="nav-page-links hidden absolute top-16 md:top-0 md:right-32 w-[90%] md:w-fit md:flex flex-col md:flex-row md:items-center justify-center gap-y-6 gap-x-6 mx-auto mr-3 order-1 md:order-2 bg-blue-600 md:bg-transparent h-80 md:h-full p-4 md:p-0 rounded-lg">
                 {
