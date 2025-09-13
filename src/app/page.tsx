@@ -1,5 +1,9 @@
 import Hook from "@/components/Hook";
 import Navigation from "@/components/Navigation";
+import Features from "@/components/Features";
+import GlobeSection from "@/components/GlobeSection";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,9 +14,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navigation />
       <Hook />
-    </>
+      <GlobeSection />
+      <Features />
+      <CTA />
+      <Footer />
+    </div>
   );
 }
