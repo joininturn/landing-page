@@ -2,16 +2,17 @@
 
 import { WordRotate } from "./magicui/word-rotate";
 import { AuroraText } from "./magicui/aurora-text";
+import { InteractiveGridPattern } from "./magicui/interactive-grid-pattern";
 
 export default function Hook() {
 
     return (
-        <section className="flex flex-col mx-auto pt-24 md:mt-20 w-[90%] max-w-[1200px] min-h-[500px]">
-            <div className="motto relative items-center justify-center w-[90%] md:w-2/3 md:min-w-[500px] h-fit text-center mx-auto">
+        <section className="relative flex flex-col mx-auto pt-24 md:mt-20 w-[90%] max-w-[1200px] min-h-[500px] overflow-hidden">
+            <div className="motto relative items-center justify-center w-[90%] md:w-2/3 md:min-w-[500px] h-fit text-center mx-auto z-10">
                 <h1
-                    className="text-2xl md:text-4xl font-semibold leading-tight bg-gradient-to-r from-black to-black/80 text-transparent bg-clip-text mb-4"
+                    className="text-3xl md:text-5xl font-semibold leading-tight bg-gradient-to-r from-black to-black/80 text-transparent bg-clip-text mb-4"
                 >
-                    <WordRotate className="text-blue-600 inline-block w-32 md:w-48 text-right mr-3" words={["Innovating", "Creating", "Paving"]} />
+                    <WordRotate className="text-blue-600 inline-block w-37 md:w-64 text-right mr-3" words={["Innovating", "Creating", "Paving", "Developing", "Leading"]} />
 
                     the future to high school <AuroraText className="inline-block" >internships.</AuroraText>
                 </h1>
