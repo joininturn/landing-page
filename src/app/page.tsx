@@ -5,6 +5,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import AboutSection from "@/components/AboutSection";
+import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 
 export const metadata: Metadata = {
   title: "Inturn Landing",
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
+      <InteractiveGridPattern className="md:[mask-image:radial-gradient(circle_400px_at_50%_50%,white_80%,transparent_100%)] [mask-image:radial-gradient(circle_300px_at_50%_50%,white_80%,transparent_100%)] absolute inset-0 w-screen h-150 md:h-175 z-0" />
       <Hook />
       <AboutSection />
       <Features />
