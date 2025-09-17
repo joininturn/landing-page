@@ -71,8 +71,7 @@ export default function Navigation() {
     }
 
     return (
-        <div className="w-screen bg-white/80">
-        <nav className="sticky top-0 left-0 mx-auto p-3 flex flex-row w-screen max-w-[1200px] h-16 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+        <nav className="sticky top-0 left-0 mx-auto p-3 flex flex-row w-screen max-w-[1200px] h-16 z-50 bg-white/20 backdrop-blur-sm border-b border-gray-100">
             { /* logo/link to homepage */ }
             <a aria-label="Hyperlink to InTurn's Homepage" href="/" className="flex flex-row items-center justify-center ml-0 md:ml-6 order-2 md:order-1">
                 <InturnLogo color="oklch(48.8% 0.243 264.376)" className="h-6 w-6" />
@@ -94,6 +93,5 @@ export default function Navigation() {
                 <div className="w-3 h-3 -top-1 -right-1 rounded-full absolute bg-blue-500" />
             </div>
         </nav>
-        </div>
     )
 }

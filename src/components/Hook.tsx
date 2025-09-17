@@ -8,7 +8,7 @@ export default function Hook() {
 
     return (
         <section className="relative flex flex-col mx-auto pt-24 md:mt-20 w-[90%] max-w-[1200px] min-h-[500px] overflow-hidden">
-            <div className="motto relative items-center justify-center w-[90%] md:w-2/3 md:min-w-[500px] h-fit text-center mx-auto z-10">
+            <div className="motto relative items-center justify-center w-[90%] md:w-2/3 md:min-w-[500px] h-fit text-center mx-auto z-10 bg-white/50">
                 <h1
                     className="text-3xl md:text-5xl font-semibold leading-tight bg-gradient-to-r from-black to-black/80 text-transparent bg-clip-text mb-4"
                 >
@@ -16,7 +16,7 @@ export default function Hook() {
 
                     the future to high school <AuroraText className="inline-block" >internships.</AuroraText>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto bg-white/50">
                     We connect ambitious high school students with innovative startups and small businesses. 
                     Gain real-world experience while helping companies grow.
                 </p>
@@ -29,7 +29,7 @@ export default function Hook() {
                     </a>
                     <a 
                         href="#about" 
-                        className="border border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-md"
+                        className="border bg-white border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-md"
                     >
                         Learn More
                     </a>

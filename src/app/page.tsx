@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
-      <InteractiveGridPattern className="md:[mask-image:radial-gradient(circle_400px_at_50%_50%,white_80%,transparent_100%)] [mask-image:radial-gradient(circle_300px_at_50%_50%,white_80%,transparent_100%)] absolute inset-0 w-screen h-150 md:h-175 z-0" />
+      <InteractiveGridPattern className="md:[mask-image:radial-gradient(circle_500px_at_50%_50%,white_10%,transparent_100%)] [mask-image:radial-gradient(circle_300px_at_50%_50%,white_50%,transparent_100%)] absolute inset-0 w-screen h-150 md:h-175 z-0" />
       <Hook />
       <AboutSection />
       <Features />
