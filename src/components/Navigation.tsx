@@ -88,7 +88,7 @@ export default function Navigation() {
             </div>
             { /* start now */ }
             <div className="relative flex flex-row items-center ml-auto mr-6 order-3">
-                <a href="/start" className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-blue-600/90 px-3 py-1.5 rounded-md text-white hover:shadow-md transition-all duration-200">Start Now</a>
+                <a href="/students/start" className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-blue-600/90 px-3 py-1.5 rounded-md text-white hover:shadow-md transition-all duration-200">Start Now</a>
                 <div className="w-3 h-3 -top-1 -right-1 rounded-full absolute bg-blue-500 animate-ping" />
                 <div className="w-3 h-3 -top-1 -right-1 rounded-full absolute bg-blue-500" />
             </div>
