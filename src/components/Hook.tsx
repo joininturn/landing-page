@@ -22,7 +22,7 @@ export default function Hook() {
                 </p>
                 <div className="flex flex-row gap-4 justify-center items-center">
                     <a 
-                        href="/start" 
+                        href="/students/start" 
                         className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:scale-105"
                     >
                         Get Started
