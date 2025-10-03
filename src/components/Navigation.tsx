@@ -115,6 +115,7 @@ export default function Navigation() {
     }, [navOpen]);
 
     const handleOnHamburgerClick = () => {
+        console.log('Hamburger clicked, navOpen:', navOpen, 'currentlyAnimating:', currentlyAnimating);
         if(currentlyAnimating) return;
         if(navOpen === null) {
             setNavOpen(false);
@@ -163,10 +164,10 @@ export default function Navigation() {
             </nav>
             
             { /* Mobile Navigation Overlay */ }
-            <div className="mobile-nav-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden md:hidden" onClick={handleOnHamburgerClick}></div>
+            <div className="mobile-nav-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden md:hidden" onClick={handleOnHamburgerClick}></div>
             
             { /* Mobile Navigation Menu */ }
-            <div className="nav-page-links fixed top-0 right-0 w-80 max-w-[90vw] h-full bg-gradient-to-br from-white via-white to-blue-50/30 backdrop-blur-xl border-l border-white/20 shadow-2xl z-[110] hidden md:hidden flex-col justify-start pt-20 px-6">
+            <div className="nav-page-links fixed top-0 right-0 w-80 max-w-[90vw] h-full bg-gradient-to-br from-white via-white to-blue-50/30 backdrop-blur-xl border-l border-white/20 shadow-2xl z-50 hidden md:hidden flex-col justify-start pt-20 px-6">
                 { /* Close Button */ }
                 <button 
                     onClick={handleOnHamburgerClick}
@@ -189,11 +190,8 @@ export default function Navigation() {
                             >
                                 <div className="flex items-center justify-between">
                                     <span className="relative z-10">{link.name}</span>
-                                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center transform group-hover:rotate-12">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    </div>
                                 </div>
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>
                         ))
                     }
@@ -203,7 +201,7 @@ export default function Navigation() {
                 <div className="mt-10 px-1">
                     <a 
                         href="/students/start" 
-                        className="group block text-center text-base font-semibold bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 px-6 py-4 rounded-2xl text-white hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 active:scale-95 border border-blue-600/20 relative overflow-hidden"
+                        className="block text-center text-base font-semibold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600/80 px-6 py-4 rounded-2xl text-white hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 active:scale-95 border border-blue-600/20 relative overflow-hidden"
                         onClick={() => setNavOpen(false)}
                     >
                         <span className="relative z-10">Get Started Today</span>
