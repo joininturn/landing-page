@@ -23,12 +23,12 @@ export default function MeetTheTeam() {
             { /* group member descriptions */ }
             <div className="flex flex-col xl:flex-row gap-x-5 gap-y-5 mx-auto mt-10">
                 <div className="flex flex-col md:flex-row gap-x-5 gap-y-5">
-                    { /* shuddup bryce, ik this can be a component */ }
-                    <div className="flex flex-col w-70 h-50 bg-blue-400 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
+                    {/* shuddup bryce, ik this can be a component */}
+                    <div className="flex flex-col w-70 h-50 bg-blue-200 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
                         <div className="m-1 bg-white rounded-lg h-full drop-shadow-xl">
                             <div className="card-content flex flex-col px-10 pt-3 gap-y-3">
                                 <h1 className="font-semibold text-xl mt-5 text-blue-900">Bryce Conrad</h1>
-                                { /* socials */ }
+                                {/* socials */}
                                 <a href="https://github.com/makors" className="website-link flex flex-row">
                                     <TbBrandGithubFilled className="text-zinc-500 w-5 h-5 mr-1 mt-1 text-sm" />
                                     <span className="text-sm mt-1 text-zinc-500">makors</span>
@@ -41,7 +41,7 @@ export default function MeetTheTeam() {
                         </div>
                         <p className="mx-auto py-1 text-sm text-blue-800">APP LEAD</p>
                     </div>
-                    <div className="flex flex-col w-70 h-50 bg-green-400 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
+                    <div className="flex flex-col w-70 h-50 bg-green-200 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
                         <div className="m-1 bg-white rounded-lg h-full drop-shadow-xl">
                             <div className="card-content flex flex-col px-10 pt-3 gap-y-3">
                                 <h1 className="font-semibold text-xl mt-5 text-green-900">Ethan You</h1>
@@ -60,7 +60,7 @@ export default function MeetTheTeam() {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row gap-x-5 gap-y-5">
-                    <div className="flex flex-col w-70 h-50 bg-red-400 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
+                    <div className="flex flex-col w-70 h-50 bg-red-200 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
                         <div className="m-1 bg-white rounded-lg h-full drop-shadow-xl">
                             <div className="card-content flex flex-col px-10 pt-3 gap-y-3">
                                 <h1 className="font-semibold text-xl mt-5 text-red-900">Robert Zhao</h1>
@@ -77,12 +77,19 @@ export default function MeetTheTeam() {
                         </div>
                         <p className="mx-auto py-1 text-sm text-red-800">FOUNDER, PROGRAMMER</p>
                     </div>
-                    <div className="flex flex-col w-70 h-50 bg-yellow-300 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
+                    <div className="flex flex-col w-70 h-50 bg-yellow-100 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-2 duration-200">
                         <div className="m-1 bg-white rounded-lg h-full drop-shadow-xl">
                             <div className="card-content flex flex-col px-10 pt-3 gap-y-3">
-                                <h1 className="font-semibold text-xl mt-5 text-yellow-900">Zinning Huang</h1>
+                                <h1 className="font-semibold text-xl mt-5 text-yellow-900">Zining Huang</h1>
                                 {/* socials */}
-                                ?
+                                <a href="https://github.com/Zirrona" className="website-link flex flex-row">
+                                    <TbBrandGithubFilled className="text-zinc-500 w-5 h-5 mr-1 mt-1 text-sm" />
+                                    <span className="text-sm mt-1 text-zinc-500">Zirrona</span>
+                                </a>
+                                <a href="mailto:zining555@gmail.com" className="website-link flex flex-row">
+                                    <TbMailFilled className="text-zinc-500 w-5 h-5 mr-1 mt-1 text-sm" />
+                                    <span className="text-sm mt-1 text-zinc-500">zining555@gmail.com</span>
+                                </a>
                             </div>
                         </div>
                         <p className="mx-auto py-1 text-sm text-yellow-800">APP PROGRAMMER</p>
