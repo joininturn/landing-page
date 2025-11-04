@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Navigation />
       <div className="absolute inset-0 w-full h-200 overflow-hidden z-0 flex items-center justify-center pointer-events-none">
         <div className="mx-auto">

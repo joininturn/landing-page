@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Features() {
     return (
-        <section id="features" className="mt-16 w-[90%] max-w-[1200px] mx-auto">
+        <section id="features" className="mt-16 w-full px-4 sm:px-6 max-w-[1200px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
