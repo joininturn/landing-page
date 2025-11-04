@@ -13,21 +13,21 @@ export default function AboutSection() {
     const studentRef = useRef<HTMLDivElement>(null);
 
     return (
-        <section className="w-[90%] max-w-[1100px] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-15">
+        <section className="w-full px-4 sm:px-6 max-w-[1100px] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="order-2 md:order-1">
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Connecting students with small businesses</h2>
-                <p className="text-gray-600 mb-6 font-bold flex flex-row items-center">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Connecting students with small businesses</h2>
+                <p className="text-sm sm:text-base text-gray-600 mb-6 font-bold flex flex-row items-center flex-wrap">
                     <MapPin className="w-5 h-5 mr-2" />
-                    Currently only in Greater Washington D.C Area
+                    <span>Currently only in Greater Washington D.C Area</span>
                 </p>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                     InTurn helps ambitious high school students discover real-world opportunities at startups and
                     small businesses. Build experience, grow your network, and contribute to companies that need
                     your energy and fresh perspective.
                 </p>
-                <div className="flex gap-4">
-                    <a href="/start" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg">Start Now</a>
-                    <a href="#features" className="border border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-5 py-2.5 rounded-lg font-semibold transition-all duration-200">See Features</a>
+                <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="/start" className="text-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg">Start Now</a>
+                    <a href="#features" className="text-center border border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-5 py-2.5 rounded-lg font-semibold transition-all duration-200">See Features</a>
                 </div>
             </div>
             { /* illustration of student beam with the business thing idk */ }

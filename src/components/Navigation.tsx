@@ -33,79 +33,76 @@ export default function Navigation() {
         tl.eventCallback("onComplete", () => setCurrentlyAnimating(false));
 
         if(!navOpen) {
-            // Opening animation
+            // Opening animation - slide from right
             tl.set(".mobile-nav-overlay", { display: "block" });
             tl.set(".nav-page-links", { display: "flex" });
             
             // Set initial state for close button
-            tl.set(".mobile-close-btn", { opacity: 0, scale: 0, rotation: -90 });
+            tl.set(".mobile-close-btn", { opacity: 0, scale: 0.8 });
             
-            // Animate overlay
+            // Animate overlay (faster)
             tl.fromTo(
                 ".mobile-nav-overlay",
                 { opacity: 0 },
-                { opacity: 1, duration: 0.3, ease: "power2.out" }
+                { opacity: 1, duration: 0.2, ease: "power2.out" }
             );
             
-            // Animate menu container
+            // Slide menu in from right (faster)
             tl.fromTo(
                 ".nav-page-links",
-                { opacity: 0, y: -20, scale: 0.95 },
-                { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.7)" },
+                { x: "100%" },
+                { x: "0%", duration: 0.25, ease: "power3.out" },
                 "-=0.1"
             );
             
-            // Animate close button
+            // Animate close button (faster)
             tl.to(
                 ".mobile-close-btn",
-                { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.7)" },
-                "-=0.3"
+                { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out" },
+                "-=0.15"
             );
             
-            // Animate menu items
+            // Animate menu items (faster)
             tl.fromTo(
                 ".nav-link-item",
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.4, ease: "power2.out", stagger: 0.08 },
-                "-=0.2"
+                { opacity: 0, x: 30 },
+                { opacity: 1, x: 0, duration: 0.25, ease: "power2.out", stagger: 0.05 },
+                "-=0.15"
             );
             
-            // Animate hamburger to X
-            tl.to(".hamburger-line-1", { rotation: 45, y: 6, duration: 0.3, ease: "power2.inOut" }, 0);
-            tl.to(".hamburger-line-2", { opacity: 0, duration: 0.2, ease: "power2.inOut" }, 0);
-            tl.to(".hamburger-line-3", { rotation: -45, y: -6, duration: 0.3, ease: "power2.inOut" }, 0);
+            // Animate hamburger to X (faster)
+            tl.to(".hamburger-line-1", { rotation: 45, y: 6, duration: 0.2, ease: "power2.inOut" }, 0);
+            tl.to(".hamburger-line-2", { opacity: 0, duration: 0.15, ease: "power2.inOut" }, 0);
+            tl.to(".hamburger-line-3", { rotation: -45, y: -6, duration: 0.2, ease: "power2.inOut" }, 0);
         } else {
-            // Closing animation
-            tl.to(".hamburger-line-1", { rotation: 0, y: 0, duration: 0.3, ease: "power2.inOut" }, 0);
-            tl.to(".hamburger-line-2", { opacity: 1, duration: 0.2, ease: "power2.inOut" }, 0.1);
-            tl.to(".hamburger-line-3", { rotation: 0, y: 0, duration: 0.3, ease: "power2.inOut" }, 0);
+            // Closing animation - slide to right
+            tl.to(".hamburger-line-1", { rotation: 0, y: 0, duration: 0.2, ease: "power2.inOut" }, 0);
+            tl.to(".hamburger-line-2", { opacity: 1, duration: 0.15, ease: "power2.inOut" }, 0.05);
+            tl.to(".hamburger-line-3", { rotation: 0, y: 0, duration: 0.2, ease: "power2.inOut" }, 0);
             
-            tl.fromTo(
+            tl.to(
                 ".mobile-close-btn",
-                { opacity: 1, scale: 1, rotation: 0 },
-                { opacity: 0, scale: 0.8, rotation: 90, duration: 0.2, ease: "power2.in" },
+                { opacity: 0, scale: 0.8, duration: 0.15, ease: "power2.in" },
                 0
             );
             
-            tl.fromTo(
+            tl.to(
                 ".nav-link-item",
-                { opacity: 1, y: 0 },
-                { opacity: 0, y: -20, duration: 0.2, ease: "power2.in", stagger: 0.05 },
-                0.1
+                { opacity: 0, x: 30, duration: 0.15, ease: "power2.in", stagger: 0.03 },
+                0
             );
             
-            tl.fromTo(
+            // Slide menu out to right
+            tl.to(
                 ".nav-page-links",
-                { opacity: 1, y: 0, scale: 1 },
-                { opacity: 0, y: -20, scale: 0.95, duration: 0.3, ease: "power2.in" },
+                { x: "100%", duration: 0.25, ease: "power3.in" },
                 "-=0.1"
             );
             
-            tl.fromTo(
+            tl.to(
                 ".mobile-nav-overlay",
-                { opacity: 1 },
                 { opacity: 0, duration: 0.2, ease: "power2.in" },
-                "-=0.1"
+                "-=0.15"
             );
             
             tl.set(".nav-page-links", { display: "none" });
@@ -158,8 +155,6 @@ export default function Navigation() {
                 { /* start now */ }
                 <div className="relative flex flex-row items-center ml-auto mr-6 order-3">
                     <a href="/students/start" className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-blue-600/90 px-3 py-1.5 rounded-md text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 hover:scale-105">Start Now</a>
-                    <div className="w-3 h-3 -top-1 -right-1 rounded-full absolute bg-blue-500 animate-ping" />
-                    <div className="w-3 h-3 -top-1 -right-1 rounded-full absolute bg-blue-500" />
                 </div>
             </nav>
             
