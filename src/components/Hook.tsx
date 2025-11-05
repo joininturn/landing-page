@@ -66,7 +66,7 @@ export default function Hook() {
     }, []);
 
     return (
-        <section className="relative flex flex-col mx-auto pt-24 md:mt-20 w-full px-4 sm:px-6 max-w-[1200px] min-h-[500px] overflow-hidden">
+        <section className="relative flex flex-col mx-auto pt-24 md:mt-30 mt-20 w-full px-4 sm:px-6 max-w-[1200px] min-h-[500px] overflow-hidden">
             <div className="motto relative items-center justify-center w-full md:w-2/3 md:min-w-[500px] h-fit mx-auto z-10 bg-white/50 px-2">
                 <h1
                     ref={parentRef}

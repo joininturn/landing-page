@@ -123,7 +123,7 @@ export default function Navigation() {
 
     return (
         <>
-            <nav className="sticky top-5 left-0 mx-auto p-3 flex flex-row w-screen max-w-[1200px] h-16 z-50 bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm rounded-full">
+            <nav className="fixed top-5 left-1/2 -translate-x-1/2 p-3 flex flex-row w-screen max-w-[1200px] h-16 z-50 bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm rounded-full">
                 { /* logo/link to homepage */ }
                 <a aria-label="Hyperlink to InTurn's Homepage" href="/" className="flex flex-row items-center justify-center ml-0 md:ml-6 order-2 md:order-1">
                     <InturnLogo color="oklch(48.8% 0.243 264.376)" className="h-6 w-6" />
